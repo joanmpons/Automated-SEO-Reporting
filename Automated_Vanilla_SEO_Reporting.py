@@ -120,7 +120,7 @@ if __name__ == '__main__':
     related_searches = list()
     
     scraper = google_scraper()
-    scraper.mentions('noticias barcelona', 1)
+    scraper.mentions('La Vanguardia', 1)
     scraper.parse_results()
     scraper.related_searches()
     #scraper.parse_rsearches_results()
@@ -222,33 +222,58 @@ plot(total_plot)
 
 #%%Html
 with open('report.html','w') as report:
-    report.write('<!DOCTYPE html>\
-                 <html>\
-                     <body>\
-                         <h1>SEO Report</h1>\
-                         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>'\
-                         +plotly.offline.plot(rank_plot1, include_plotlyjs=False, output_type='div')+\
-                         plotly.offline.plot(rank_plot2, include_plotlyjs=False, output_type='div')+\
-                         plotly.offline.plot(total_plot, include_plotlyjs=False, output_type='div')+\
-                         plotly.offline.plot(pie1, include_plotlyjs=False, output_type='div')+\
-                         plotly.offline.plot(pie2, include_plotlyjs=False, output_type='div')+\
-                     '</body>\
+    report.write('\
+                 <!DOCTYPE html>\
+                 <html lang="en">\
+                 <head>\
+                     <meta charset="UTF-8">\
+                     <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+                     <title>SEO Report</title>\
+                     <style>\
+                         body {\
+                             font-family: Arial, sans-serif;\
+                             margin: 0;\
+                             padding: 20px;\
+                             background-color: #f9f9f9;\
+                         }\
+                         .container {\
+                             max-width: 800px;\
+                             margin: 0 auto;\
+                             background-color: #fff;\
+                             padding: 20px;\
+                             border-radius: 8px;\
+                             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\
+                         }\
+                         h1 {\
+                             text-align: center;\
+                             color: #333;\
+                         }\
+                         .graph {\
+                             margin-bottom: 40px;\
+                         }\
+                     </style>\
+                 </head>\
+                 <body>\
+                     <div class="container">\
+                      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>'\
+                                          +plotly.offline.plot(rank_plot1, include_plotlyjs=False, output_type='div')+\
+                                          plotly.offline.plot(rank_plot2, include_plotlyjs=False, output_type='div')+\
+                                          plotly.offline.plot(total_plot, include_plotlyjs=False, output_type='div')+\
+                                          plotly.offline.plot(pie1, include_plotlyjs=False, output_type='div')+\
+                                          plotly.offline.plot(pie2, include_plotlyjs=False, output_type='div')+\
+                     '</div>\
+                 </body>\
                  </html>')
+#WHAT IS THIS?
+#fig = make_subplots(
+ #   rows=2, cols=2,
+  #  specs=[[{"type": "pie"}, {"type": "pie"}],
+       #    [{"type": "pie"}, {"type": "pie"}]],
+#)
 
-
-
-
-
-fig = make_subplots(
-    rows=2, cols=2,
-    specs=[[{"type": "pie"}, {"type": "pie"}],
-           [{"type": "pie"}, {"type": "pie"}]],
-)
-
-fig.add_trace(pie2.data[0],row=1,col=1)
-fig.add_trace(pie1.data[0],row=1,col=2)
-plot(fig)
-
+#fig.add_trace(pie2.data[0],row=1,col=1)
+#fig.add_trace(pie1.data[0],row=1,col=2)
+#plot(fig)
 
 
 
