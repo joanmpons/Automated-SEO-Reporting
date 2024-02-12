@@ -34,6 +34,10 @@ Aunque puede resultar muy útil conocer el total de menciones, saber el porcenta
 Como puede observarse La Vanguardia esta en un 8,33% de los headers y en un 15,5% de los resultados para el conjunto de la búsqueda.
 </p>
 
+<p align="center">
+<img src="Images/Graph_2" width="500">
+</p>
+
 ### Ranking por Búsqueda
 <p align="justify"> 
 Otro indicador importante es saber cómo se distribuyen las menciones entre las distintas búsquedas tanto para los headers como para los resultados.
@@ -41,11 +45,19 @@ Otro indicador importante es saber cómo se distribuyen las menciones entre las 
 En este gráfico podemos cuáles han sido las búsquedas relacionadas sugeridas por Google así como el ranking de La Vanguardia en los distintos casos. De aquí podemos obtener dos conclusiones interesantes, la primera es que una de la búsquedas sugeridas ha sido la propia empresa, un muy buen indicador. La segunda es que La Vanguardia tiende a no incluir el nombre de la empresa en los headers.
 </p>
 
+<p align="center">
+<img src="Images/Graph_3" width="500">
+</p>
+
 ### Número de Menciones por Ranking
 <p align="justify"> 
 Finalmente, un buen medidor global del posicionamiento online de la empresa es el recuento de menciones en el entre el top tres de los resultados en Google.
 
 En este caso el resultado es de una mención en el top uno tanto para headers como para resultados, una en el top dos para resultados y una para headers y resultados en el top 3.
+</p>
+
+<p align="center">
+<img src="Images/Graph_4" width="500">
 </p>
 
 ### Creación del Documento de Reporting
