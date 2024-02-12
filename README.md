@@ -18,6 +18,8 @@ Los datos extraídos serán los headers y el texto asociado (etiquetado como "Re
 ### Menciones Totales
 Una de las métricas principales para el análisis SEO es el total de menciones contabilizadas. En este caso al analizar los resultados de la query "Noticias Barcelona", así como los de las búsquedas relacionadas, podemos observar siete menciones en los headers y trece en los resultados.
 
+![Screenshot](Images/Graph_1)
+
 ### Porcentaje de Menciones en los Resultados
 Aunque puede resultar muy útil conocer el total de menciones, saber el porcentaje que estas representan respecto al resto de resultados enriquece el análisis sobre la presencia online de la empresa.
 
