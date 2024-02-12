@@ -17,11 +17,14 @@ La creación del proceso de web scraping es el primer paso para el desarrollo de
 
 Los datos extraídos serán los headers y el texto asociado (etiquetado como "Results" en los gráficos) a cada resultado en el buscador. Una vez ejecutada la búsqueda es necesario procesar los datos pasa su posterior visualización. Este paso incluye ordenar los resultados según su posicionamiento en el motor de búsqueda, analizar si contienen la palabra clave (que será el nombre de la empresa en cuestión; en este caso, La Vanguardia) y recopilar el número de menciones totales en las SERP por esta búsqueda y las relacionadas que se detecten como óptimas.
 </p>
-<img src="Images/Graph_1" width="500" align="right" >
 
 ### Menciones Totales
 <p align="justify"> 
 Una de las métricas principales para el análisis SEO es el total de menciones contabilizadas. En este caso al analizar los resultados de la query "Noticias Barcelona", así como los de las búsquedas relacionadas, podemos observar siete menciones en los headers y trece en los resultados.
+</p>
+
+<p align="center">
+<img src="Images/Graph_1" width="500">
 </p>
 
 ### Porcentaje de Menciones en los Resultados
