@@ -223,51 +223,71 @@ plot(total_plot)
 #%%Html
 with open('report.html','w') as report:
     report.write('''
-                 <!DOCTYPE html>
-                  <html lang="en">
-                  <head>
-                      <meta charset="UTF-8">
-                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                      <title>SEO Report</title>
-                      <style>
-                          body {
-                              font-family: Arial, sans-serif;
-                              margin: 0;
-                              padding: 20px;
-                              background-color: #f9f9f9;
-                          }
-                          .container {
-                              max-width: 800px;
-                              margin: 0 auto;
-                              background-color: #fff;
-                              padding: 20px;
-                              border-radius: 8px;
-                              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                          }
-                          h1 {
-                              text-align: center;
-                              color: #333;
-                          }
-                          .graph {
-                              margin-bottom: 40px;
-                              max-width: 600px;
-                              margin-left: auto; 
-                              margin-right: auto; 
-                          }
-                      </style>
-                  </head>
-                  <body>
-                      <div class="container">
-                       <h1>SEO Report</h1>
-                       '''
-                       '<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>'
-                                          +plotly.offline.plot(rank_plot1, include_plotlyjs=False, output_type='div')+
-                                          plotly.offline.plot(rank_plot2, include_plotlyjs=False, output_type='div')+
-                                          plotly.offline.plot(total_plot, include_plotlyjs=False, output_type='div')+
-
-                      '</div>\
-                  </body>\
-                  </html>')
+                 
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>SEO Report</title>
+     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+         body {
+             font-family: 'Roboto', sans-serif;
+             margin: 0;
+             padding: 20px;
+             background-color: #f9f9f9;
+         }
+         .container {
+             max-width: 800px;
+             margin: 0 auto;
+             background-color: #fff;
+             padding: 50px;
+             border-radius: 8px;
+             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+         }
+         h1 {
+             text-align: center;
+             color: #333;
+         }
+         .graph {
+             margin-bottom: 40px;
+             max-width: 600px;
+             margin-left: auto; 
+             margin-right: auto; 
+         }
+         p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify; 
+        }
+     </style>
+ </head>
+ <body>
+     <div class="container">
+      <h1>SEO Report</h1>
+      <h2>Sample HTML Document</h2>
+      '''
+      '<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>'
+                         +plotly.offline.plot(rank_plot1, include_plotlyjs=False, output_type='div')+
+                         '<h3>Lorem Ipsum</h2>\
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae \
+                          aliquam arcu. Ut vitae ultrices odio. Curabitur facilisis turpis sit amet neque\
+                          suscipit consequat. Integer et eleifend velit. Vivamus consequat tempor elit, nec\
+                          venenatis ipsum laoreet eget. Fusce vehicula neque at diam volutpat, non euismod\
+                          lorem cursus.</p>'
+      '<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>'
+                         +plotly.offline.plot(rank_plot2, include_plotlyjs=False, output_type='div')+
+                         '<h3>Lorem Ipsum</h2>\
+                          <p>Nullam malesuada orci ac bibendum eleifend. Pellentesque habitant morbi\
+                          tristique senectus et netus et malesuada fames ac turpis egestas. Nunc at\
+                          malesuada lorem. Nam fringilla mi sit amet felis ultricies, id facilisis eros\
+                          vulputate. Fusce nec nisi sem. Duis aliquam, nisl at tristique lobortis, magna\
+                          purus sollicitudin eros, in faucibus mauris justo sit amet sem.</p>\
+     </div>\
+ </body>\
+ </html>'
+                 )
 
 
 
