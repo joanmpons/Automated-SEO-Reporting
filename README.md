@@ -63,3 +63,7 @@ En este caso el resultado es de una mención en el top uno tanto para headers co
 ### Creación del Documento de Reporting
 <p align="justify"> 
 Si la aplicación tiene que ser usada por usuarios no técnicos, lo mas conveniente es crear un archivo ejecutable o un .bat a partir del script que genere un archivo con los gráficos presentados anteriormente. En este caso las visualizaciones se han realizado con la librería plotly, una de las ventajas de la cual es que cuenta con una función para extraer los gráficos en formato html e incrustarlos en un archivo.
+
+<p align="center">
+<img src="Images/HTML" width="500">
+</p>
