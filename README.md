@@ -5,11 +5,9 @@ El objetivo de este proyecto es la creación de una herramienta para analizar la
 </p>
 
 ## Objetivos 
-<p align="justify"> 
 - Rastrear las menciones de la empresa en relación a ciertas búsquedas
 - Analizar las menciones de la empresa para las búsquedas similares sugeridas por Google
 - Automatizar la creación de KPIs y gráficos predefinidos para agilizar el análisis SEO de la empresa
-</p>
 
 ## Proyecto
 
