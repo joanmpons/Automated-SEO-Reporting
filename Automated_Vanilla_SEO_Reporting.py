@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Tue Aug 22 23:53:14 2023
@@ -18,6 +17,7 @@ from bs4 import BeautifulSoup
 from parsel import Selector
 
 #%% Define Scraper
+
 class google_scraper:
     cookies = {
     'CONSENT': 'YES+',
@@ -123,10 +123,11 @@ if __name__ == '__main__':
     scraper.mentions('La Vanguardia', 1)
     scraper.parse_results()
     scraper.related_searches()
+    #Enable next step to repeat the search process for the related keywords suggested by Google
     #scraper.parse_rsearches_results()
  
-#%%
-#def clean_results(keyword):
+#%% Results processing
+
 results['Mentions'] = np.where(results['Results'].str.contains('Vanguardia'),'La Vanguardia','Other')
 headers['Mentions'] = np.where(headers['Headers'].str.contains('Vanguardia'),'La Vanguardia','Other')
 results['Rank'] = results.groupby('Query').cumcount()+1
@@ -142,9 +143,9 @@ plot_df['Mentions'] = np.where(plot_df['value'].str.contains('Vanguardia'),'La V
 plot_df['Mentions_count'] = np.where(plot_df['Mentions']=='La Vanguardia',1,0)
 
 
-#%% Visualize
+#%% Visualize results with interactive graphs
 
-#pie graph mentions percentage results
+#Pie graph mentions percentage results
 pie1 = px.pie(results,
               values = np.where(results['Mentions'],1,1),
               names = 'Mentions',
@@ -154,7 +155,8 @@ pie1 = px.pie(results,
               title = 'Mentions in results (%)')
 pie1.update_layout(font_family='Lato')
 plot(pie1)
-#pie headers
+
+#Pie headers
 pie2 = px.pie(headers,
               values = np.where(headers['Headers'],1,1),
               names = 'Mentions',
@@ -183,6 +185,7 @@ rank_plot1.update_layout(title = 'Rank by Query',
                          font_family="Lato")
 
 plot(rank_plot1)
+
 #Count of ranks 1,2 and 3 for all queries
 rank_plot2 = px.bar(plot_df[(plot_df['Rank']>0)&(plot_df['Rank']<=3)&(plot_df['Mentions']=='La Vanguardia')].groupby(['Rank','variable'],as_index=False).count(),
               x='Rank',
@@ -203,6 +206,7 @@ rank_plot2.update_layout(title = 'Number of Mentions by Rank',
                          font_family="Lato")
 
 plot(rank_plot2)
+
 # Total mentions count bar graph horizontal
 total_plot = px.bar(plot_df.groupby('variable',as_index=False).sum(),
                     x='Mentions_count',
@@ -220,7 +224,7 @@ total_plot.update_layout(title = 'Total Mentions',
 
 plot(total_plot)
 
-#%%Html
+#%% Create sample HTML document with interactive graphs
 with open('report.html','w') as report:
     report.write('''
                  
